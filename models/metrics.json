@@ -1,0 +1,52 @@
+{
+  "accuracy": 0.965,
+  "severity_mae": 0.05099615154237819,
+  "states": [
+    "healthy",
+    "imbalance",
+    "bearing_fault",
+    "looseness"
+  ],
+  "confusion_matrix": [
+    [
+      99,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      100,
+      0,
+      0
+    ],
+    [
+      13,
+      0,
+      87,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      100
+    ]
+  ],
+  "features": [
+    "rms",
+    "peak",
+    "crest",
+    "kurtosis",
+    "band_0_30",
+    "band_30_70",
+    "band_70_130",
+    "band_130_230",
+    "band_230_380",
+    "band_380_500",
+    "peak_freq"
+  ],
+  "n_train": 1200,
+  "n_test": 400,
+  "note": "Simulated data only. Not validated on a real machine."
+}

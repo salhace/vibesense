@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "VibeSense",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -110, "left": -140, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "btn1", "top": 110, "left": -140, "attrs": { "color": "orange" } },
+    { "type": "wokwi-led", "id": "ledG", "top": -100, "left": 260, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "ledY", "top": -60, "left": 260, "attrs": { "color": "yellow" } },
+    { "type": "wokwi-led", "id": "ledR", "top": -20, "left": 260, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "rG", "top": -90, "left": 200, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "rY", "top": -50, "left": 200, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "rR", "top": -10, "left": 200, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "pot1:VCC", "esp:3V3", "red", [] ],
+    [ "pot1:GND", "esp:GND.1", "black", [] ],
+    [ "pot1:SIG", "esp:D34", "orange", [] ],
+    [ "btn1:1.l", "esp:D15", "orange", [] ],
+    [ "btn1:2.l", "esp:GND.1", "black", [] ],
+    [ "esp:D25", "rG:1", "green", [] ],
+    [ "rG:2", "ledG:A", "green", [] ],
+    [ "esp:D26", "rY:1", "gold", [] ],
+    [ "rY:2", "ledY:A", "gold", [] ],
+    [ "esp:D27", "rR:1", "red", [] ],
+    [ "rR:2", "ledR:A", "red", [] ],
+    [ "ledG:C", "esp:GND.1", "black", [] ],
+    [ "ledY:C", "esp:GND.1", "black", [] ],
+    [ "ledR:C", "esp:GND.1", "black", [] ]
+  ],
+  "dependencies": {}
+}

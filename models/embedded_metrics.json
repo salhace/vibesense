@@ -1,0 +1,9 @@
+{
+  "trees": 10,
+  "max_depth": 6,
+  "clf_nodes": 256,
+  "reg_nodes": 1196,
+  "approx_flash_bytes": 21948,
+  "accuracy_small_model": 0.95,
+  "severity_mae_small_model": 0.06389806949880775
+}
